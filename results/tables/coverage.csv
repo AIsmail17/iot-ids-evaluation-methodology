@@ -1,0 +1,73 @@
+model,protocol,task,feature_set,n_seeds,under_seeded,classes_absent_from_train,max_classes_absent
+decision_tree,A,binary,full_39,3,False,,0
+decision_tree,A,binary,top_15,3,False,,0
+decision_tree,A,binary,top_8,3,False,,0
+lightgbm,A,binary,full_39,3,False,,0
+lightgbm,A,binary,top_15,3,False,,0
+lightgbm,A,binary,top_8,3,False,,0
+logreg,A,binary,full_39,3,False,,0
+logreg,A,binary,top_15,3,False,,0
+logreg,A,binary,top_8,3,False,,0
+majority,A,binary,full_39,3,False,,0
+majority,A,binary,top_15,3,False,,0
+majority,A,binary,top_8,3,False,,0
+random_forest,A,binary,full_39,3,False,,0
+random_forest,A,binary,top_15,3,False,,0
+random_forest,A,binary,top_8,3,False,,0
+xgboost,A,binary,full_39,3,False,,0
+xgboost,A,binary,top_15,3,False,,0
+xgboost,A,binary,top_8,3,False,,0
+decision_tree,B,binary,full_39,3,False,,0
+decision_tree,B,binary,top_15,3,False,,0
+decision_tree,B,binary,top_8,3,False,,0
+lightgbm,B,binary,full_39,3,False,,0
+lightgbm,B,binary,top_15,3,False,,0
+lightgbm,B,binary,top_8,3,False,,0
+logreg,B,binary,full_39,3,False,,0
+logreg,B,binary,top_15,3,False,,0
+logreg,B,binary,top_8,3,False,,0
+majority,B,binary,full_39,3,False,,0
+majority,B,binary,top_15,3,False,,0
+majority,B,binary,top_8,3,False,,0
+random_forest,B,binary,full_39,3,False,,0
+random_forest,B,binary,top_15,3,False,,0
+random_forest,B,binary,top_8,3,False,,0
+xgboost,B,binary,full_39,3,False,,0
+xgboost,B,binary,top_15,3,False,,0
+xgboost,B,binary,top_8,3,False,,0
+decision_tree,A,multiclass7,full_39,3,False,,0
+decision_tree,A,multiclass7,top_15,3,False,,0
+decision_tree,A,multiclass7,top_8,3,False,,0
+lightgbm,A,multiclass7,full_39,3,False,,0
+lightgbm,A,multiclass7,top_15,3,False,,0
+lightgbm,A,multiclass7,top_8,3,False,,0
+logreg,A,multiclass7,full_39,3,False,,0
+logreg,A,multiclass7,top_15,3,False,,0
+logreg,A,multiclass7,top_8,3,False,,0
+majority,A,multiclass7,full_39,3,False,,0
+majority,A,multiclass7,top_15,3,False,,0
+majority,A,multiclass7,top_8,3,False,,0
+random_forest,A,multiclass7,full_39,3,False,,0
+random_forest,A,multiclass7,top_15,3,False,,0
+random_forest,A,multiclass7,top_8,3,False,,0
+xgboost,A,multiclass7,full_39,3,False,,0
+xgboost,A,multiclass7,top_15,3,False,,0
+xgboost,A,multiclass7,top_8,3,False,,0
+decision_tree,B,multiclass7,full_39,3,False,Brute Force,1
+decision_tree,B,multiclass7,top_15,3,False,Brute Force,1
+decision_tree,B,multiclass7,top_8,3,False,Brute Force,1
+lightgbm,B,multiclass7,full_39,3,False,Brute Force,1
+lightgbm,B,multiclass7,top_15,3,False,Brute Force,1
+lightgbm,B,multiclass7,top_8,3,False,Brute Force,1
+logreg,B,multiclass7,full_39,3,False,Brute Force,1
+logreg,B,multiclass7,top_15,3,False,Brute Force,1
+logreg,B,multiclass7,top_8,3,False,Brute Force,1
+majority,B,multiclass7,full_39,3,False,Brute Force,1
+majority,B,multiclass7,top_15,3,False,Brute Force,1
+majority,B,multiclass7,top_8,3,False,Brute Force,1
+random_forest,B,multiclass7,full_39,3,False,Brute Force,1
+random_forest,B,multiclass7,top_15,3,False,Brute Force,1
+random_forest,B,multiclass7,top_8,3,False,Brute Force,1
+xgboost,B,multiclass7,full_39,3,False,Brute Force,1
+xgboost,B,multiclass7,top_15,3,False,Brute Force,1
+xgboost,B,multiclass7,top_8,3,False,Brute Force,1

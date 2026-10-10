@@ -1,0 +1,54 @@
+# C6 experiment matrix (CLAUDE.md section 9).
+# Rule 3.9: results come from scripts driven by config files. Nothing in
+# train.py hardcodes any of this.
+
+subsample_path: "data/processed/cic_iot2023_subsample.parquet"
+
+# --- The matrix ---------------------------------------------------------
+protocols: ["A", "B"]            # A = random (control), B = grouped (valid)
+# multiclass6 is the supervisor's specified scope (Benign, DDoS, DoS,
+# Reconnaissance, Spoofing, Brute Force) and is the one the report leads on.
+# multiclass7 keeps Mirai and Web-based as well; retained as a documented
+# superset, not as the headline, because Mirai is the easiest class in the
+# data and including it lifts every macro average.
+tasks: ["binary", "multiclass7", "multiclass6"]
+feature_sets: ["full_39", "top_15", "top_8"]
+models: ["majority", "logreg", "decision_tree", "random_forest", "xgboost", "lightgbm"]
+seeds: [42, 43, 44]              # rule 3.8: >=3 seeds, report mean +/- std
+
+test_size: 0.2
+
+# --- Model hyperparameters ----------------------------------------------
+# Two different kinds of choice live here and they are NOT the same thing:
+#
+#   * TRACTABILITY caps (random_forest n_estimators) exist so the sweep
+#     finishes in hours rather than days. They are a constraint on the
+#     experiment, and must be stated as such in the report.
+#   * The DESIGNED footprint lever for RQ2 is the feature_set factor
+#     (39 / 15 / 8), not these. Model depth/size is deliberately NOT varied
+#     per-model, so it does not become a confound sitting on top of the
+#     feature-set comparison.
+model_params:
+  majority: {}
+  logreg:
+    max_iter: 200                # lbfgs on 3.5M rows; convergence warnings
+    solver: "lbfgs"              # are surfaced, not suppressed
+  decision_tree: {}              # unbounded, matching the section 8 "single
+                                 # decision tree" baseline; its artifact size
+                                 # is itself an RQ2 datapoint
+  random_forest:
+    n_estimators: 50             # TRACTABILITY cap (sklearn default is 100)
+  xgboost:
+    n_estimators: 100
+  lightgbm:
+    n_estimators: 100
+
+# --- Timing probe -------------------------------------------------------
+# A cheap single-cell sweep used to measure per-model cost before committing
+# to the full matrix. Deliberately the cheapest cell: binary task, full
+# feature set (no ranking fit needed), one seed.
+probe:
+  protocol: "B"
+  task: "binary"
+  feature_set: "full_39"
+  seed: 42

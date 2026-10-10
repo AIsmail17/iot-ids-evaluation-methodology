@@ -1,0 +1,13 @@
+model,protocol,macro_recall,accuracy,n_predicted,n_folds,classes_ever_absent_from_train,wall_seconds
+majority,A,0.1667,0.5354,3833074,5,,37.1
+majority,B,0.1667,0.5354,3833074,5,Brute Force,35.9
+logreg,A,0.6501,0.678,3833074,5,,316.6
+logreg,B,0.5298,0.6548,3833074,5,Brute Force,287.5
+decision_tree,A,0.6969,0.792,3833074,5,,15834.6
+decision_tree,B,0.5704,0.7337,3833074,5,Brute Force,7902.7
+random_forest,A,0.7463,0.8098,3833074,5,,734.1
+random_forest,B,0.6196,0.7491,3833074,5,Brute Force,740.6
+lightgbm,A,0.7951,0.7818,3833074,5,,217.8
+lightgbm,B,0.6217,0.7353,3833074,5,Brute Force,216.6
+xgboost,A,0.7981,0.7857,3833074,5,,265.7
+xgboost,B,0.6244,0.7375,3833074,5,Brute Force,258.4

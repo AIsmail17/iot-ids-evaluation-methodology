@@ -1,0 +1,19 @@
+# Data — never commit raw or processed dataset files
+data/
+
+# Model artifacts
+*.joblib
+*.pkl
+*.onnx
+models/
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/

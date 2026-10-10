@@ -1,0 +1,13 @@
+,value
+scope,full corpus
+n_rows,46776700
+n_distinct_vectors,20689442
+n_duplicated_rows,28155847
+pct_duplicated_rows,60.19
+n_conflicting_groups,524401
+n_rows_in_conflicting_groups,14057145
+pct_rows_in_conflicting_groups,30.05
+n_bayes_error_rows,3405070
+pct_bayes_error,7.28
+max_achievable_accuracy_pct,92.72
+wall_seconds,288.2

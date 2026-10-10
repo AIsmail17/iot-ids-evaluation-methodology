@@ -1,0 +1,17 @@
+# C2 — stratified class-capped subsampling config.
+# Kept out of code per CLAUDE.md rule 3.9 ("no edited constants in code").
+
+# Max rows kept per class. Classes with fewer rows than this keep everything.
+# Chosen so the resulting subsample lands in the brief's 3-5M target range —
+# see DECISIONS.md, 2026-09-02, for the arithmetic behind this number.
+cap_per_class: 200000
+
+# Single fixed seed for the row sampling within over-cap classes. Distinct
+# from the ">=3 seeds" rule in CLAUDE.md 3.8, which applies to stochastic
+# experiments (the train/test split, model training) that get repeated and
+# reported as mean +/- std. This seed controls which ROWS exist in the one
+# canonical subsample every downstream component reuses -- it isn't repeated.
+seed: 42
+
+input_path: "data/processed/cic_iot2023.parquet"
+output_path: "data/processed/cic_iot2023_subsample.parquet"
